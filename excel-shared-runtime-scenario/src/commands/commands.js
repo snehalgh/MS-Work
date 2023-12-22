@@ -13,7 +13,9 @@ function btnConnectService(event) {
 }
 
 function btnDisconnectService(event) {
+    debugger
   console.log("Disconnect service button pressed");
+  let userTokenEncoded = await OfficeRuntime.auth.getAccessToken();
   // Your code goes here
   g.state.setConnected(false);
   updateRibbon();
